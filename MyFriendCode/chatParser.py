@@ -36,12 +36,12 @@ class Chat:
 
         for msg in self.messages:
             if(last_name==msg.user.name):
-                txt+=f"{(msg.date.strftime('%H:%M:%S'))}: {msg.text}\n"
+                txt+=f" {msg.text}\n"
             else:
                 res.append(txt)
-                txt="";
+                txt=""
                 last_name=msg.user.name
-                txt += f"{(msg.date.strftime('%H:%M:%S'))}: {msg.text}\n"
+                txt += f" {msg.text}\n"
         return res
 
 
